@@ -24,7 +24,7 @@ const Navbar = () => {
             icon: <HomeIcon />,
         },
         {
-            text: "Sobre Nosotros",
+            text: "Sobre Nosotros ",
             icon: <InfoIcon />,
         },
         {

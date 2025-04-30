@@ -1,0 +1,68 @@
+/* Navbar.css */
+
+/* Navbar base */
+nav {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    backdrop-filter: blur(10px); /* Efecto blur */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilidad Safari */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-bottom-left-radius: 30px; /* SOLO bordes de abajo redondeados */
+    border-bottom-right-radius: 30px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Logo container */
+  .nav-logo-container img {
+    height: 50px;
+    width: auto;
+    margin-top: 2px;
+    margin-bottom: -4px;
+  }
+  
+  /* Links del navbar */
+  .navbar-links-container {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .navbar-links-container a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links-container a:hover {
+    color: #757575;
+    transform: scale(1.08);
+  }
+  
+  /* Icono de menú hamburguesa */
+  .navbar-menu-container {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .navbar-links-container {
+      display: none;
+    }
+  
+    .navbar-menu-container {
+      display: block;
+    }
+  }
+  

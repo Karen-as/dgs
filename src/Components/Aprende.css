@@ -1,0 +1,92 @@
+/* Aprende.css */
+
+.aprende-section-wrapper {
+    font-family: 'Roboto', sans-serif;
+    padding: 4rem 2rem;
+    background-color: transparent; /* Sin fondo */
+    color: #333; /* Texto oscuro para contraste */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0; /* Eliminar márgenes */
+}
+
+.aprende-section-top {
+    max-width: 800px;
+    margin-bottom: 3rem;
+}
+
+.primary-subheading {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #888 !important;
+    
+}
+
+.primary-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #121212; /* Color oscuro para encabezado */
+}
+
+.primary-text {
+    font-size: 1rem;
+    color: #444; /* Gris oscuro */
+    line-height: 1.6;
+}
+
+/* Estilo para las tarjetas de información */
+.aprende-section-bottom {
+    display: flex;
+    gap: 1.5rem; /* Reducir espacio entre las tarjetas */
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%; /* Asegura que se ajuste a toda la pantalla */
+}
+
+.aprende-section-info {
+    background: #f9f9f9; /* Fondo blanco con un tono gris suave */
+    padding: 1.5rem; /* Reducir el relleno de las tarjetas */
+    border-radius: 15px; /* Bordes más redondeados */
+    width: 220px; /* Reducir el ancho de las tarjetas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Agregar transición para efecto hover */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.aprende-section-info:hover {
+    transform: scale(1.05); /* Efecto de escalado para que se vea como si viniera al frente */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra más fuerte */
+    background-color: #f2f2f2; /* Cambiar color de fondo ligeramente al pasar el ratón */
+}
+
+.info-boxes-img-container img {
+    width: 70px; /* Reducir el tamaño de las imágenes */
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.aprende-section-info h2 {
+    font-size: 1.4rem; /* Reducir el tamaño de la fuente */
+    margin-bottom: 0.5rem;
+    color: #121212;
+}
+
+.aprende-section-info p {
+    font-size: 0.9rem;
+    color: #666; /* Gris medio */
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+    .aprende-section-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+}

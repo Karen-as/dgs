@@ -1,18 +1,19 @@
 import React from 'react';
 import Navbar from './Navbar';
 import BannerBackground from "../Assets/home-banner-background.png";
-import BannerImage from "../Assets/home-banner-image.png";
+import BannerImage from "../Assets/Logo.png";
 import { FiArrowRight } from 'react-icons/fi';
+import '../Components/Inicio.css'
 
 const Inicio = () => {
   return (
     <div className='inicio-container'>
       <Navbar />
-      <div className="home-banner-container">
-        <div className="home-bannerImage-container" >
+      <div className="inicio-banner-container">
+        <div className="inicio-bannerImage-container" >
             <img src={BannerBackground} alt="" /> 
         </div>
-        <div className="home-text-section">
+        <div className="inicio-text-section">
             <h1 className="primary-heading">
                 Tu espacio para crecer como diseñador
             </h1>
@@ -23,7 +24,7 @@ const Inicio = () => {
                 Explorar Recursos <FiArrowRight />
             </button>
         </div>
-        <div className="home-image-container">
+        <div className="inicio-image-container">
             <img src={BannerImage} alt="" />
         </div>
       </div>

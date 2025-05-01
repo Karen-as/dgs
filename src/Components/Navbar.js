@@ -16,8 +16,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
-import '../Components/Navbar.css'
-import PagAprende from "./Components/AprenderPag.js"
+import '../Components/Navbar.css';
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -46,10 +45,10 @@ const Navbar = () => {
         <img src={Logo} alt="" />
       </div>
       <div className="navbar-links-container">
-        <a href="">Inicio</a>
-        <a href="">Aprende</a>
-        <a href="">Herramientas Online</a>
-        <a href="">Contacto</a>
+        <a href="/">Inicio</a>
+        <a href="/aprende">Aprende</a>
+        <a href="/herramientas">Herramientas Online</a>
+        <a href="/contacto">Contacto</a>
         
       </div>
       <div className="navbar-menu-container">

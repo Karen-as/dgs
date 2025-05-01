@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
-import "./AprendePag.css"; 
+
 import Slider from "react-slick"; // Asegúrate de tener instalada la librería: npm install react-slick slick-carousel
 
 // Estilos necesarios para el slider
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-const AprendePag = () => {
+const HerramientasPag = () => {
   const settings = {
     dots: true,
     infinite: false,
@@ -97,4 +97,4 @@ const AprendePag = () => {
   );
 };
 
-export default AprendePag;
+export default HerramientasPag;

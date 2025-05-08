@@ -1,98 +1,81 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
-import "./AprendePag.css"; 
-import Slider from "react-slick"; // Asegúrate de tener instalada la librería: npm install react-slick slick-carousel
+import Footer from "../Components/Footer";
+import "./AprendePag.css";
+import roomImage from "../Assets/room.jpg";
 
-// Estilos necesarios para el slider
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+// Nueva sección de recursos
+const recursos = [
+  {
+    titulo: "Diseño Gráfico",
+    descripcion: "Explora herramientas y principios para potenciar tu diseño visual.",
+    link: "https://tulink1.com"
+  },
+  {
+    titulo: "Diseño Audiovisual",
+    descripcion: "Conoce recursos clave para producción de video y contenido multimedia.",
+    link: "https://tulink2.com"
+  },
+  {
+    titulo: "Tipografía y Color",
+    descripcion: "Aprende a combinar fuentes y paletas que comuniquen con impacto.",
+    link: "https://tulink3.com"
+  }
+];
 
 const AprendePag = () => {
-  const settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 2,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        }
-      }
-    ]
-  };
-
-  const card = (title, link) => (
-    <div className="slider-card" onClick={() => window.open(link, "_blank")}>
-      <div className="card-content">
-        <h4>{title}</h4>
-        <p>Haz clic para explorar</p>
-      </div>
-    </div>
-  );
-
   return (
     <>
       <Navbar />
-      <div className="aprende-page">
-
-        {/* Banner */}
-        <section className="banner-aprende">
-          <h1>2. Aprende</h1>
+      <div className="interior-section">
+        <div className="text-content">
+          <h2>Explora, Aprende y Diseña</h2>
           <p>
-            Accede a contenidos educativos para fortalecer tus habilidades en diferentes áreas del diseño, 
-            con recursos prácticos, tutoriales y experiencias reales.
+            Bienvenido a la sección Aprende. Aquí encontrarás recursos esenciales
+            para potenciar tu creatividad. Navega por nuestras categorías y lleva
+            tus ideas al siguiente nivel.
           </p>
-        </section>
-
-        {/* Subsección: Diseño Gráfico */}
-        <section className="subseccion">
-          <h2>2.1 Diseño Gráfico</h2>
-          <p>
-            Domina la composición visual, el diseño editorial, la creación de marcas y el uso de herramientas clave como Photoshop e Illustrator.
-          </p>
-          <Slider {...settings}>
-            {card("Curso Photoshop", "https://example.com")}
-            {card("Branding Básico", "https://example.com")}
-            {card("Diseño Editorial", "https://example.com")}
-            {card("Tipografía Avanzada", "https://example.com")}
-            {card("Guía de Illustrator", "https://example.com")}
-          </Slider>
-        </section>
-
-        {/* Subsección: Diseño Audiovisual */}
-        <section className="subseccion">
-          <h2>2.2 Diseño Audiovisual</h2>
-          <p>
-            Aprende a crear piezas audiovisuales con impacto. Explora edición de video, animación y narrativas visuales con herramientas como Premiere y After Effects.
-          </p>
-          <Slider {...settings}>
-            {card("Edición con Premiere", "https://example.com")}
-            {card("Animación Básica", "https://example.com")}
-            {card("Narrativa Visual", "https://example.com")}
-            {card("After Effects Tutorial", "https://example.com")}
-            {card("Motion Graphics", "https://example.com")}
-          </Slider>
-        </section>
-
-        {/* Subsección: Color y Tipografía */}
-        <section className="subseccion">
-          <h2>2.3 Color y Tipografía</h2>
-          <p>
-            Comprende cómo el color y las fuentes afectan la comunicación visual. Aprende a combinarlos estratégicamente para reforzar tus diseños.
-          </p>
-          <Slider {...settings}>
-            {card("Teoría del Color", "https://example.com")}
-            {card("Psicología del Color", "https://example.com")}
-            {card("Combinación Tipográfica", "https://example.com")}
-            {card("Tipografías Web", "https://example.com")}
-            {card("Color en Marca", "https://example.com")}
-          </Slider>
-        </section>
-
+          <div className="features">
+            <ul>
+              <li>Aprede de Diseño Gráfico</li>
+              <li>Descubre la producción Audiovisula</li>
+              <li>Comprende la tipografía y el color</li>
+            </ul>
+          </div>
+        </div>
+        <div className="image-content">
+          <div className="image-box">
+            <img src={roomImage} alt="Recurso visual" />
+          </div>
+        </div>
       </div>
+
+      {/* Nueva sección con fondo amarillo y tarjetas */}
+      <section className="seccion-recursos">
+        {recursos.map((item, index) => (
+          <div
+            key={index}
+            className={`recurso-bloque ${index % 2 !== 0 ? "reverse" : ""}`}
+          >
+            
+            <div className="recurso-info">
+              <h2>Diseño Gráfico</h2>
+              <p>{item.descripcion}</p>
+            </div>
+            <a
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="recurso-card"
+            >
+              <h3>{item.titulo}</h3>
+              <p>{item.descripcion}</p>
+            </a>
+          </div>
+        ))}
+      </section>
+
+      <Footer />
     </>
   );
 };

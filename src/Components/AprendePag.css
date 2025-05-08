@@ -1,0 +1,130 @@
+.interior-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 8%;
+  gap: 2rem;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Animación */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.text-content {
+  flex: 1;
+}
+
+.text-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.features ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.features li {
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-box {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.seccion-recursos {
+  background-color: #f7c948; /* Fondo amarillo */
+  padding: 4rem 8%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.recurso-bloque {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.recurso-bloque.reverse {
+  flex-direction: row-reverse;
+}
+
+.recurso-info {
+  flex: 1;
+}
+
+.recurso-info h2 {
+  font-size: 2.2rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.recurso-info p {
+  font-size: 1rem;
+  color: #444;
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+.recurso-card {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #222;
+}
+
+.recurso-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.recurso-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.recurso-card p {
+  font-size: 1rem;
+  color: #666;
+}
